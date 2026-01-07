@@ -4,6 +4,9 @@
 # @Time : 2026/1/6 16:23
 import math
 import sys
+from os import name
+from sys import flags
+
 # 数据类型
 a = "start.cx"
 print(a,type("b"))
@@ -80,3 +83,13 @@ s = "12.3"
 print(s,type(s))
 s = float(s)
 print(s,type(s))
+
+# 练习
+print("\\n \\t \\r 1 2 3")
+namea = "悲惨世界"
+namea_vaue = 30
+nameb_value = 50
+nameb = "百年孤独"
+print(namea + " " + nameb)
+print(namea_vaue + nameb_value)
+
