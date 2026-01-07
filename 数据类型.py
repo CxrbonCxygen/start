@@ -32,8 +32,8 @@ n1 = .512e-3
 print(n1)
 print(sys.float_info.max)
 print(sys.float_info.min)
-print(math.ulp(0.0))
-print(f"8.3/2.7 = {8.1/3}")# 精度损失
+print("精度损失")
+print(f"8.1/3 = {8.1/3}")# 精度损失
 from decimal import Decimal
 print(Decimal("8.1")/Decimal("3"))
 # bool型
