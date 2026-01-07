@@ -72,5 +72,11 @@ n1 = 100
 result = "abc" + str(n1)
 print(result)
 # python的类型不固定，可以随时转换，运算转高精度
-a = 10
-print(a+50)
+a = 10.2
+print(type(50))
+print(a+50,type(a),"\n")
+# 数字字符串可以转数值型，但是要逻辑成立
+s = "12.3"
+print(s,type(s))
+s = float(s)
+print(s,type(s))
