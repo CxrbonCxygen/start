@@ -54,3 +54,51 @@ if not a or not b:
     print("yes")
 else:
     print("no")
+x = 10
+y = 20
+x and y # 短路运算符
+# 如果 x 为 false 返回x 否则返回y
+x or y # 短路运算符
+# 如果 x 为 true 返回 x 否则返回y
+not x
+# not 只会返回bool型
+# 感觉是c的内核
+print(not "yes")
+print(not 0)
+
+# 复合赋值运算符
+i = 100
+num1 = 200
+i //= 15
+print(i)
+num1 %= 30
+print(num1)
+
+a = 30
+b = 40
+a += b
+b = a - b
+a -= b
+print(f"交换后：{a},{b}")
+a,b = b,a
+print(f"再次交换后：{a},{b}")
+print(a,b)
+
+# 三元运算符号ternary operator
+# 值 if 条件 else 条件
+a = 10
+b = 20
+max = a if a > b else b
+print(f"{max}")
+c = 30
+max = b if b > (a if a > c else c) else (a if a > c else c)
+# 嵌套三元运算符
+print(f"{max}")
+
+# 优先级
+# 算术运算符# () **
+# * / // % + -
+# 位运算符
+# 比较运算符
+# 逻辑运算符
+# 赋值运算符
