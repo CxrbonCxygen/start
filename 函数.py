@@ -56,6 +56,28 @@ book_info4(name="《Python 3.7 语言基础》", author="王蒙", price="69.9")
 # 11.调用另一个.py文件中的函数
 # import xx.py
 import 导入函数
-a = int(input("a为："))
-b = int(input("b为："))
-print(f"a+b的和结果是：{导入函数.adds(a, b)}")
+# a = int(input("a为："))
+# b = int(input("b为："))
+# print(f"a+b的和结果是：{导入函数.adds(a, b)}")
+
+def f1(a):
+    print(f"调用函数f1()后a的值是:{a},地址是：{id(a)}")
+    a += 1
+    print(f"调用函数f1()后a的值是:{a},地址是：{id(a)}")
+
+a = 1
+print(f"a的值在函数调用前是:{a},地址是：{id(a)}")
+f1(a)
+print(f"a的值在函数调用后是:{a},地址是：{id(a)}")
+
+# 字符串也存在内存驻留机制
+def f2(name):
+    print(f"调用函数f2()后name的值是:{name},地址是：{id(name)}")
+    name += "Tom"
+    print(f"调用函数f2()后name的值是:{name},地址是：{id(name)}")
+
+name = "Jerry"
+print(f"name的值在函数调用前是:{name},地址是：{id(name)}")
+f2(name)
+print(f"name的值在函数调用后是:{name},地址是：{id(name)}")
+# 数值和字符串是不可变数据类型
