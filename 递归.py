@@ -2,6 +2,8 @@
 # @Auther : CarbonOxygen
 # @File : 递归.py
 # @Time : 2026/3/2 17:59
+from pygetwindow import pointInRect
+
 
 def test(n):
     if n > 2 :
@@ -47,5 +49,37 @@ def hanoi(n, a, b, c):
     print(f"将第{n}个盘子从{a}--->{c}") # 移动盘子
     hanoi(n-1, b, a, c)
 
-n = input("请输入盘子数量：")
-hanoi(int(n), "A", "B", "C")
+# n = input("请输入盘子数量：")
+# hanoi(int(n), "A", "B", "C")
+
+
+# 函数可以传递函数
+x , y = 1, 1
+
+def max_num(num1, num2):
+    max = num1 if num1 > num2 else num2
+    return max
+
+def f1(fun, num1, num2):
+    return fun(num1, num2)
+
+def f2(fun, num1, num2):
+    return fun(num1, num2), num1 + num2
+
+a = f1(max_num, x, y)
+b1, b2 = f2(max_num, x, y)
+print(f"{a}\n{b1} {b2}")
+
+# 一个函数可以接收多个函数
+
+def fun1(x, y):
+    return x + y
+
+def fun2(x, y):
+    return x * y
+
+def f3(fun1, x, y, fun2):
+    return fun1(x, y), fun2(x, y)
+x , y = 1, 1
+x, y = f3(fun1, x, y, fun2)
+print(f"{x} {y}")
