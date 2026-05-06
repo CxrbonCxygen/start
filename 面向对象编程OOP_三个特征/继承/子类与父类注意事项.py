@@ -38,12 +38,17 @@ class C(B):
         print("C类中的fly方法")
 
     def say(self):
-        print(self.n1)
-        print(self.n2)
-        print(self.n3)
-        print(super().n1)
-        print(B.n1)
-        print(C.n1)
+        print(self.n1) #100
+        print(self.n2) #400
+        print(self.n3) #600
+        print(super().n1) #200
+        print(B.n1) #200
+        print(C.n1) #100
+
+        self.fly()
+        A.fly( self)
+        super().fly()
 
 
 c = C()
+c.say()
